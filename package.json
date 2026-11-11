@@ -1,0 +1,12 @@
+{
+  "name": "itmo-html-task-3",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Учебный сайт с намеренными ошибками загрузки и отрисовки",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/server.test.mjs"
+  }
+}

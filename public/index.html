@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Полоса — студенческий журнал</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/site.css?scenario={{scenario}}">
+  <script src="/js/analytics.js?scenario={{scenario}}"></script>
+  <script async src="/js/tools.js?scenario={{scenario}}"></script>
+  <script async src="/js/app.js?scenario={{scenario}}"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="page-width masthead-inner">
+      <a class="wordmark" href="#top" aria-label="Полоса, к началу страницы">ПОЛОСА<span class="wordmark-dot">.</span></a>
+      <span class="edition">Студенческий журнал<br>Ноябрь 2026 · Выпуск 03</span>
+    </div>
+  </header>
+  <main id="top" class="page-width">
+    <section class="lead" aria-labelledby="lead-title">
+      <p class="eyebrow">Город · Люди · Идеи</p>
+      <h1 id="lead-title" class="lead-title">Большие перемены<br>начинаются в кампусе</h1>
+      <p class="lead-intro">Истории о тех, кто исследует мир, спорит с привычным и каждый день делает что-то новое. Свежий номер студенческого журнала.</p>
+      <figure class="lead-figure">
+        <img class="lead-image" src="/assets/campus.svg?scenario={{scenario}}" alt="Геометрическая иллюстрация университетского квартала">
+        <figcaption>Открытый город начинается с открытых идей.</figcaption>
+      </figure>
+    </section>
+    <section class="archive" aria-labelledby="archive-title">
+      <div class="archive-toolbar">
+        <div class="archive-caption">
+          <h2 id="archive-title">Архив историй</h2>
+          <p id="archive-count">Материалы редакции</p>
+        </div>
+        <div class="view-controls" role="group" aria-label="Вид карточек">
+          <button id="view-detailed" type="button" aria-pressed="true">Подробно</button>
+          <button id="view-compact" type="button" aria-pressed="false">Компактно</button>
+        </div>
+      </div>
+      <p class="view-status" id="view-status" aria-live="polite">Подробный вид</p>
+      <div id="news-feed" data-view="detailed" data-init-count="0">
+        {{cards}}
+      </div>
+    </section>
+  </main>
+  <footer class="page-width page-footer">Полоса · Студенческие истории, которые стоит прочитать. <a href="#top">Наверх ↑</a></footer>
+</body>
+</html>
